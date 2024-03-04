@@ -1,0 +1,1 @@
+{"name": "My Custom Codespace","build": {"dockerfile": "Dockerfile","context": "..","args": {"YOUR_ARG": "your_value"}},"forwardPorts": [3000],"settings": {},"extensions": [],"remoteUser": "codespace"}
