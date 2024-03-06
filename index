@@ -1,0 +1,75 @@
+<html><head>
+<style>
+#taskbar {
+  background: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#clock {
+  color: white;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+#start-menu {
+  color: white;
+}
+
+.app {
+  width: 50%;
+  height: 70vh;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#web-browser {
+  background: lightblue;
+}
+
+#calculator {
+  background: lightgreen;
+}
+
+</style>
+</head>
+<body>
+
+<div id="taskbar"><div id="start-menu">
+    Start
+  </div>
+  
+  <div id="clock"></div>
+</div>
+
+<div class="app" id="web-browser">
+  <h2>Web Browser</h2>
+  <!-- Add web browser content here -->
+</div>
+
+<div class="app" id="calculator">
+  <h2>Calculator</h2>
+  <!-- Add calculator content here -->
+</div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  
+  document.getElementById('clock').innerHTML = `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateClock, 1000);
+</script>
+
+
+</body></html>
